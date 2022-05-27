@@ -1,0 +1,9 @@
+*****Windows 10
+
+https://apps.microsoft.com/store/detail/arduino-ide/9NBLGGH4RSD8?hl=pt-br&gl=BR
+
+*****Windows 7
+
+
+*****Download Geral
+https://www.arduino.cc/en/software

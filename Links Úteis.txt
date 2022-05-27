@@ -1,0 +1,5 @@
+https://www.robocore.net/tutoriais/primeiros-passos-com-modulo-i2c
+https://www.robocore.net/tutoriais/irrigador-automatico-arduino
+https://www.robocore.net/tutoriais/instalando-arduino-ide
+https://www.robocore.net/tutoriais/instalando-driver-do-arduino
+https://www.robocore.net/tutoriais/usando-sensor-fluxo-de-agua

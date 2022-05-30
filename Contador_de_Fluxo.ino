@@ -1,10 +1,13 @@
+//v1.1
+
 //definicao do pino do sensor e de interrupcao
 const int INTERRUPCAO_SENSOR = 0; //interrupt = 0 equivale ao pino digital 2
 const int PINO_SENSOR = 2;
 
 //definicao dos pinos conectados ao rele e ao botao
 const int PINO_RELE = 7;
-const int PINO_BOTAO = 8;
+const int PINO_BOTAO_RESET_TEMP = 8;
+const int PINO_BOTAO_RESET_GERAL = 12;
 
 //definicao da variavel de contagem de voltas
 unsigned long contador = 0;
@@ -36,7 +39,8 @@ void setup(){
   digitalWrite(PINO_RELE, LOW);
 
   //configuracao do pino do botao como entrada
-  pinMode(PINO_BOTAO, INPUT);
+  pinMode(PINO_BOTAO_RESET_TEMP, INPUT);
+  pinMode(PINO_BOTAO_RESET_GERAL, INPUT);
   
 }
 
@@ -87,9 +91,17 @@ void loop() {
   }
 
   //logica para zerar a variavel volume_total
-  if(digitalRead(PINO_BOTAO) == HIGH){
+  if(digitalRead(PINO_BOTAO_RESET_TEMP) == HIGH){
     delay(30);
-    if(digitalRead(PINO_BOTAO) == HIGH){
+    if(digitalRead(PINO_BOTAO_RESET_TEMP) == HIGH){
+      volume = 0;
+    }
+  }
+
+  //logica para zeral avariavel volume_parcial
+  if(digitalRead(PINO_BOTAO_RESET_GERAL) == HIGH){
+    delay(30);
+    if(digitalRead(PINO_BOTAO_RESET_GERAL) == HIGH){
       volume_total = 0;
     }
   }
